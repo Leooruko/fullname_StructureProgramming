@@ -17,15 +17,17 @@ int main(){
     double account_balance = 0.0;
     double amount;
     int loggedIn;
+    int attempts = 3;
     printf("Enter PIN to log in: \n");
     scanf("%d", &input);
 
     loggedIn = verifyPin(pin,input);
 
-    while (loggedIn != 0){
+    while (loggedIn != 0 & attempts > 1){        
         printf("\nEnter PIN to log in: ");
         scanf("%d", &input);
         loggedIn = verifyPin(pin, input);
+        attempts --;
     }
 
     char option;
