@@ -11,11 +11,11 @@
   
 2. How Variable declaration differs from pointer declaration and definition. Clearly highlight the role of operators * and &:
    - Variable declaration includes assigning the rvalue to the lvalue i.e
-      - ```c
+      ```c
       int n = 10
       ```
     - In pointer assinment we use the * to define the pointer and the & to point to the location of the normal variable i.e
-     - ```c
+     ```c
      int *ptr = &n;
      ```
 
@@ -30,3 +30,4 @@
     - the code example shows incrementing the value of n using pointer dereferencing.
   
 4. 
+
