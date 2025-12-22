@@ -29,5 +29,41 @@
     ```
     - the code example shows incrementing the value of n using pointer dereferencing.
   
-4. 
+4. Pointers are preffered when you need direct memory access,efficiency, shared data modifications or dynamic behaviour that normal varirables cannot provide:
+   a. When a function must modify the original variable. i.e in variable swapping
+   b. When working with arrays and strings. Using pointers avoids copying large amounts of data and improves performance.
+   ```c
+   int sum(int *arr, int size) {
+    int total = 0;
+    for (int i = 0; i < size; i++) {
+        total += *(arr + i);
+    }
+    return total;
+   }
+   ```
+   c.  Dynamic memory allocation - normal variables have fixed memory size  and lifetime.
+   ```c
+   int n;
+   scanf("%d", &n);
+   
+   int *arr = (int *)malloc(n * sizeof(int));
+   
+   for (int i = 0; i < n; i++) {
+       arr[i] = i * 2;
+   }
+   
+   free(arr);
+   ```
+   d. Efficient Handling of large structures.
+   e. Implementing data structures
+   ```c
+   struct Node {
+    int data;
+    struct Node *next;
+   };
+   ```
+   
+   
+
+
 
